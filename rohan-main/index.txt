@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Rohan Eldhose Manjummekudiyil, Class 12 Student, Design Enthusiast and Tech Innovator.">
+    <title>Rohan Eldhose Manjummekudiyil | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&f[]=satoshi@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=15">
+
+    <!-- Local JS -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- STICKY HEADER -->
+    <header id="site-header" class="sticky-header">
+        <div class="header-container">
+            <a href="#home" class="logo">REM</a>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">HOME</a></li>
+                    <li><a href="#about" class="nav-link">ABOUT</a></li>
+                    <li><a href="#skill-set" class="nav-link">SKILLS</a></li>
+                    <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+                    <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <a href="#contact" class="whatsapp-btn" aria-label="WhatsApp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                    </svg>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="hero-section"
+            style="justify-content: center; text-align: center; position: relative; overflow: hidden;">
+
+            <!-- Scrolling Background Text -->
+            <div class="scrolling-text-bg" style="z-index: 0;">
+                <div class="scrolling-text-content">
+                    Designer
+                </div>
+            </div>
+
+            <!-- Attractive Center Glow Orb -->
+            <div class="hero-glow-orb"></div>
+
+            <div class="hero-content"
+                style="max-width: 800px; display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2;">
+                <h1 class="hero-title"><span class="orange-animated-name">ROHAN ELDHOSE</span>
+                    <br><span class="plain-white-name">MANJUMMEKUDIYIL</span>
+                </h1>
+                <div class="hero-image-wrapper parallax-image hero-custom-blend"
+                    style="z-index: 2; position: relative;">
+                    <img src="hero-transparent.png" alt="Rohan Hero Graphic" class="hero-image-animate hero-main-img">
+                </div>
+                <h2 class="hero-subtitle">Design Enthusiast <span class="divider">|</span> Tech Innovator</h2>
+                <br>
+                <p class="tagline" style="font-size: 1.2rem; margin-bottom: 20px;">Class 12 Student</p>
+                <p class="hero-description reveal-text animated-letters" style="max-width: 650px;">Building structured
+                    ideas that combine technology, research, and visual design.</p>
+
+
+            </div>
+
+            <!-- Designer Outline text floating above the image -->
+            <div class="scrolling-text-bg" style="z-index: 3;">
+                <div class="scrolling-text-content outline-text">
+                    Designer
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-image-wrapper slide-in-left">
+                        <div class="abstract-image">
+                            <img src="IMG_20250504_104635966.jpg.jpeg" alt="About Rohan" class="about-profile-img"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 0;">
+                            <div class="img-gradient-overlay" style="z-index: 1;"></div>
+
+                            <!-- Nameplate aligned at bottom left over image -->
+                            <div class="image-nameplate">
+                                <h3>ROHAN ELDHOSE MANJUMMEKUDIYIL</h3>
+                                <p>Student & Innovator</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-content revised-about">
+                        <div class="about-subheadline reveal-text">
+                            <span class="subheadline-line"></span> STUDENT & INNOVATOR
+                        </div>
+                        <h2 class="section-title reveal-text"
+                            style="font-size: 5rem; font-weight: 900; font-family: 'Clash Display', sans-serif; letter-spacing: -2px; text-transform: uppercase; margin-bottom: 2rem; color: #ffffff; line-height: 1;">
+                            WHO AM I ?</h2>
+
+                        <div class="about-text-container">
+                            <p class="reveal-text">Education has the power to shape individuals, institutions, and
+                                societies—and this belief has guided my journey as a student with a strong interest in
+                                innovation, design, and technology. Throughout my school years, I have actively
+                                participated in academic projects, exhibitions, and creative initiatives.</p>
+
+                            <p class="reveal-text">My approach centers on thoughtful leadership, collaboration, and
+                                practical execution, ensuring that every initiative contributes to meaningful
+                                improvement in learning. Over the years, I have been involved in developing project
+                                models and presentations that required research, structured thinking, and teamwork.</p>
+
+                            <p class="reveal-text">Alongside academics, I have explored creative fields such as graphic
+                                design, which has strengthened my understanding of aesthetics and user-focused thinking.
+                                I consider myself disciplined, adaptable, and eager to deepen my knowledge in an
+                                environment that challenges me intellectually.</p>
+                        </div>
+
+                        <div class="about-quote-box reveal-text">
+                            "ENGINEERING AWARENESS, DESIGNING IMPACT."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILL SET SECTION -->
+        <section id="skill-set" class="skill-set-section section-container" style="padding-top: 60px;">
+            <h2 class="section-title align-center">Skill <span class="gradient-text">Set</span></h2>
+            <div class="skills-grid">
+
+                <div class="skill-card glass-card interactive-skill"
+                    onclick="window.location.href='skill-graphic-design.html'">
+                    <div class="skill-icon">??</div>
+                    <h3>Graphic Design</h3>
+                    <div class="card-indicator">Explore</div>
+                </div>
+
+                <div class="skill-card glass-card interactive-skill"
+                    onclick="window.location.href='skill-video-editing.html'">
+                    <div class="skill-icon">??</div>
+                    <h3>Video Editing</h3>
+                    <div class="card-indicator">Explore</div>
+                </div>
+
+                <div class="skill-card glass-card interactive-skill"
+                    onclick="window.location.href='skill-branding.html'">
+                    <div class="skill-icon">??</div>
+                    <h3>Branding & Identity</h3>
+                    <div class="card-indicator">Explore</div>
+                </div>
+
+                <div class="skill-card glass-card interactive-skill"
+                    onclick="window.location.href='skill-presentation.html'">
+                    <div class="skill-icon">??</div>
+                    <h3>Presentation Design</h3>
+                    <div class="card-indicator">Explore</div>
+                </div>
+
+                <div class="skill-card glass-card interactive-skill"
+                    onclick="window.location.href='skill-wildlife.html'">
+                    <div class="skill-icon">??</div>
+                    <h3>Wildlife Photography</h3>
+                    <div class="card-indicator">Explore</div>
+                </div>
+
+                <div class="skill-card glass-card interactive-skill"
+                    onclick="window.location.href='skill-concept.html'">
+                    <div class="skill-icon">??</div>
+                    <h3>Concept Dev.</h3>
+                    <div class="card-indicator">Explore</div>
+                </div>
+
+                <div class="skill-card glass-card interactive-skill"
+                    onclick="window.location.href='skill-technical.html'">
+                    <div class="skill-icon">??</div>
+                    <h3>Technical Model</h3>
+                    <div class="card-indicator">Explore</div>
+                </div>
+
+                <div class="skill-card glass-card interactive-skill"
+                    onclick="window.location.href='skill-problem-solving.html'">
+                    <div class="skill-icon">??</div>
+                    <h3>Problem Solving</h3>
+                    <div class="card-indicator">Explore</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHAT I DO SECTION -->
+        <section id="what-i-do" class="whatido-section">
+            <div class="section-container">
+                <h2 class="section-title align-center"
+                    style="font-size: 3.5rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase;">WHAT I
+                    DO?</h2>
+                <div class="video-wrapper glass-card"
+                    style="width: 100%; max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; display: flex; justify-content: center; align-items: center; border-radius: 24px; padding: 0; overflow: hidden;">
+                    <video autoplay loop muted playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                        <source src="vdeo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="gallery-section">
+            <div class="section-container">
+                <h2 class="section-title"><span class="gradient-text">Projects</span></h2>
+                <div class="projects-grid">
+
+                    <div class="project-card expandable-card" onclick="window.location.href='terrasense.html'">
+                        <div class="project-image terrasense"></div>
+                        <div class="project-info">
+                            <h3>Terrasense – Disaster Monitoring</h3>
+                            <ul class="project-details">
+                                <li>Infrasonic sensing framework</li>
+                                <li>Environmental signal monitoring</li>
+                                <li>Early-warning system structuring</li>
+                                <li>Positioned for national-level collaboration</li>
+                            </ul>
+                            <div class="card-indicator" style="opacity: 0.6; pointer-events: none;">Touch for details
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card expandable-card" onclick="window.location.href='school-logo.html'">
+                        <div class="project-image school-logo"></div>
+                        <div class="project-info">
+                            <h3>Official School Logo</h3>
+                            <ul class="project-details">
+                                <li>Selected and adopted as institutional identity</li>
+                                <li>Clean, structured brand symbolism</li>
+                            </ul>
+                            <div class="card-indicator" style="opacity: 0.6; pointer-events: none;">Touch for details
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image dam-model"></div>
+                        <div class="project-info">
+                            <h3>Mullaperiyar Gravity Dam</h3>
+                            <ul class="project-details">
+                                <li>Miniature model explaining principles</li>
+                                <li>Hydrostatic pressure resistance</li>
+                                <li>Structural stability of gravity dams</li>
+                                <li>Basic civil engineering principles</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card expandable-card" onclick="window.location.href='documentary.html'">
+                        <div class="project-image documentary"></div>
+                        <div class="project-info">
+                            <h3>School Documentary</h3>
+                            <ul class="project-details">
+                                <li>Concept direction</li>
+                                <li>Script development</li>
+                                <li>Editing & visual structuring</li>
+                            </ul>
+                            <div class="card-indicator" style="opacity: 0.6; pointer-events: none;">Touch for details
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="section-container" style="position: relative; max-width: 1300px;">
+                <div class="contact-grid"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                    <div class="contact-info-side reveal-text">
+                        <h2 class="contact-massive-heading"
+                            style="font-family: 'Clash Display', sans-serif; font-size: 8rem; font-weight: 900; line-height: 0.9; margin-bottom: 3rem; text-transform: uppercase;">
+                            <span style="color: #ffffff; display: block;">LET'S</span>
+                            <span style="color: #cda848; display: block;">CONNECT</span>
+                        </h2>
+
+                        <div class="inquiries-section" style="margin-bottom: 2.5rem;">
+                            <h4
+                                style="font-size: 0.85rem; letter-spacing: 2px; color: #a0a0a0; margin-bottom: 15px; text-transform: uppercase;">
+                                For Inquiries</h4>
+                            <a href="#" class="btn-whatsapp"
+                                style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #ffffff; font-weight: 700; padding: 12px 25px; border-radius: 30px; font-size: 1rem; margin-bottom: 2rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                                </svg>
+                                CHAT ON WHATSAPP
+                            </a>
+                        </div>
+
+                        <div class="contact-detail-row"
+                            style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 2rem;">
+                            <div class="icon-circle"
+                                style="width: 45px; height: 45px; flex-shrink: 0; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: #cda848;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                </svg>
+                            </div>
+                            <div style="padding-top: 10px;">
+                                <p
+                                    style="font-size: 1.2rem; font-weight: 700; color: #ffffff; font-family: 'Clash Display', sans-serif; letter-spacing: 0.5px;">
+                                    rohaneldhose2008@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-row"
+                            style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 2.5rem;">
+                            <div class="icon-circle"
+                                style="width: 45px; height: 45px; flex-shrink: 0; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: #cda848;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4
+                                    style="font-size: 0.75rem; letter-spacing: 1px; color: #a0a0a0; margin-bottom: 5px; text-transform: uppercase;">
+                                    Location</h4>
+                                <h3
+                                    style="font-size: 1.1rem; color: #cda848; font-family: 'Clash Display', sans-serif; margin-bottom: 5px; letter-spacing: 1px;">
+                                    KERALA, INDIA</h3>
+                                <p style="color: #cccccc; font-size: 0.9rem; max-width: 300px; line-height: 1.5;">
+                                    Available for local collaborations and global discussions.</p>
+                            </div>
+                        </div>
+
+                        <div class="bot-social-links" style="display: flex; gap: 15px;">
+                            <a class="icon-circle bg-white" href="#"
+                                style="background: #ffffff; color: #000000; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                            </a>
+                            <a class="icon-circle bg-white" href="#"
+                                style="background: #ffffff; color: #000000; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-graphics-side reveal-text"
+                        style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                        <div class="cursor-reveal-container" id="cursor-reveal-container"
+                            style="position: relative; width: 100%; max-width: 450px; height: 600px; background: rgba(0,0,0,0.4); border-radius: 30px; border: 1px solid rgba(255,255,255,0.05); overflow: hidden; display: flex; justify-content: center; align-items: center; cursor: crosshair;">
+                            <!-- Fallback/Background Text -->
+                            <h2
+                                style="font-family: 'Clash Display', sans-serif; font-size: 6rem; color: rgba(255,255,255,0.03); z-index: 1; user-select: none;">
+                                HOVER</h2>
+
+                            <!-- Image to be revealed by cursor -->
+                            <img src="contact.jpeg" alt="Contact Rohan" class="cursor-reveal-image"
+                                id="cursor-reveal-image"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; pointer-events: none; -webkit-mask-image: radial-gradient(circle var(--mask-size, 120px) at var(--mouse-x, -200%) var(--mouse-y, -200%), rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%); mask-image: radial-gradient(circle var(--mask-size, 120px) at var(--mouse-x, -200%) var(--mouse-y, -200%), rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%); transition: -webkit-mask-position 0.1s ease, mask-position 0.1s ease;">
+
+                            <!-- Sparkle that follows the cursor -->
+                            <div id="reveal-sparkle"
+                                style="position: absolute; width: 8px; height: 8px; background: #cda848; border-radius: 50%; pointer-events: none; z-index: 3; box-shadow: 0 0 20px 8px rgba(205, 168, 72, 0.6); top: var(--mouse-y, -200%); left: var(--mouse-x, -200%); transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal Rule Divider -->
+                <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.05); margin: 60px 0;">
+
+                <!-- Signature Section -->
+                <div class="signature-section reveal-text"
+                    style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 0;">
+                    <span class="sparkle" style="font-size: 2rem;">?</span>
+                    <h2 class="meaningful-text" style="font-size: 2.5rem; text-shadow: none;">LET'S BUILD SOMETHING
+                        MEANINGFUL.</h2>
+                    <span class="sparkle" style="font-size: 2rem;">?</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FIXED FOOTER -->
+    <footer id="site-footer" class="fixed-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Rohan Eldhose Manjummekudiyil. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
