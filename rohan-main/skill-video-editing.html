@@ -56,6 +56,23 @@
                     display: block;
                     border-radius: 12px;
                 }
+
+                /* Mobile view adjustments */
+                @media (max-width: 768px) {
+                    h1.gradient-text {
+                        font-size: 2.5rem !important;
+                    }
+                    h3 {
+                        font-size: 1.5rem !important;
+                    }
+                    p, ul li {
+                        font-size: 1rem !important;
+                        text-align: justify !important;
+                    }
+                    .glass-card {
+                        padding: 30px 20px !important;
+                    }
+                }
             </style>
             <div class="video-container">
                 <video class="skill-video" autoplay loop muted controls>

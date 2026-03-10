@@ -55,6 +55,26 @@
                     background-repeat: no-repeat;
                     background-position: center;
                 }
+
+                /* Mobile view adjustments */
+                @media (max-width: 768px) {
+                    h1.gradient-text {
+                        font-size: 2.5rem !important;
+                    }
+                    h3 {
+                        font-size: 1.5rem !important;
+                    }
+                    p, ul li {
+                        font-size: 1rem !important;
+                        text-align: justify !important;
+                    }
+                    .glass-card {
+                        padding: 30px 20px !important;
+                    }
+                    .drawing-container {
+                        height: 250px !important;
+                    }
+                }
             </style>
             <div class="drawing-container">
                 <div class="drawing-image"></div>

@@ -20,7 +20,7 @@
 
 html {
     scroll-behavior: smooth;
-    /* Smooth Scroll active */
+    overflow-x: hidden;
 }
 
 body {
@@ -30,6 +30,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    max-width: 100%; /* Strictly prevent body from exceeding viewport width */
 }
 
 
@@ -1239,7 +1240,9 @@ ul {
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
     }
 
     .font-designer {
@@ -1315,8 +1318,9 @@ ul {
     }
 
     .hero-title {
-        font-size: 2.8rem !important;
+        font-size: 2.2rem !important;
         margin-bottom: 15px;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
@@ -1329,27 +1333,169 @@ ul {
         margin-bottom: 15px;
     }
 
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+
     .scrolling-text-content {
-        font-size: clamp(2rem, 12vw, 3.5rem) !important;
+        font-size: clamp(2rem, 15vw, 3.5rem) !important;
+    }
+
+    .about-image-wrapper {
+        width: 100% !important;
+        flex: 1 1 auto !important;
+        display: block !important;
+    }
+    
+    .abstract-image {
+        height: 350px !important;
+        border-radius: 20px;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    .about-profile-img {
+        filter: grayscale(0%) contrast(1.15) saturate(1.1) !important; /* Remove grayscale and slightly boost color on phone for better clarity */
+        image-rendering: -webkit-optimize-contrast; /* Safari crisp scaling */
+        image-rendering: crisp-edges;
+        transform: translateZ(0); /* Hardware acceleration to reduce blur during layout reflow */
+    }
+    
+    .desktop-about-header {
+        display: none !important; /* Hide desktop header on mobile */
+    }
+    
+    .mobile-about-header {
+        display: block !important; /* Show mobile header on mobile */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .mobile-about-header .section-title {
+        font-size: 3rem !important;
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+    
+    .about-text-container p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    
+    .mobile-about-header .about-subheadline {
+        justify-content: center;
+    }
+    
+    .about-quote-box {
+        font-size: 1rem;
+        text-align: center;
+        border-left: none;
+        border-top: 2px solid var(--primary-orange);
+        padding-left: 0;
+        padding-top: 15px;
     }
 
     .section-container {
-        padding: 60px 20px !important;
+        padding: 40px 15px !important;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr !important;
+    .skills-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
         gap: 20px !important;
     }
     
-    .contact-massive-heading {
-        font-size: 3.5rem !important;
-        line-height: 1 !important;
+    .skill-card {
+        flex: 1 1 150px !important; /* Smaller flex basis for phone to keep side-by-side if they fit, or slightly larger if single column is forced */
+        max-width: 250px !important;
+        padding: 20px 15px !important; /* Slightly smaller padding */
+    }
+    
+    .skill-card h3 {
+        font-size: 1.1rem !important;
     }
 
+    .contact-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+    
+    .contact-info-side, .contact-graphics-side {
+        flex: 1 !important;
+    }
+    
+    .contact-info-side {
+        text-align: left;
+        flex: 0 0 50% !important; /* Force true 50/50 split */
+        padding-right: 10px;
+    }
+    
+    .contact-graphics-side {
+        flex: 0 0 50% !important;
+    }
+    
+    .contact-massive-heading {
+        font-size: 1.5rem !important; /* Very small to fit left side */
+        line-height: 1.1 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Target inline styles for phone and email on mobile */
+    .inquiries-section p {
+        font-size: 1rem !important; 
+    }
+    
+    .contact-detail-row p {
+        font-size: clamp(0.5rem, 3.5vw, 0.8rem) !important; /* Scale text down on very small screens so it fits */
+        white-space: nowrap !important; /* Force onto a single line */
+    }
+    
+    .icon-circle {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .icon-circle svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    #contact-image-container {
+        height: 250px !important; /* Shorter image */
+        width: 100% !important;
+    }
+    
+    .contact-detail-row {
+        justify-content: flex-start;
+        align-items: center !important; /* Force vertical centering instead of flex-start */
+        gap: 5px !important; /* Very small gap between icon and text */
+        margin-bottom: 1rem !important; /* Less bottom margin on mobile */
+    }
+    
+    .contact-detail-row > div:nth-child(2) {
+        padding-top: 0 !important; /* Override inline padding-top from HTML */
+    }
+    
     .signature-section h2 {
         font-size: 1.8rem !important;
     }
+    
+    .whatido-section .section-title {
+        font-size: 2.2rem !important; /* Scale down heading */
+        letter-spacing: -2px !important; /* Tighter letter spacing */
+        white-space: nowrap !important; /* Force onto a single line */
+    }
+    
+    .whatido-section {
+        min-height: 20vh !important;
+        padding: 40px 0 !important;
+    }
+
 }
 
 /* What I Do Section Enhancements */

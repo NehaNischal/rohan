@@ -121,6 +121,34 @@
                     from { transform: scale(0.8); opacity: 0; }
                     to { transform: scale(1); opacity: 1; }
                 }
+
+                /* Mobile view adjustments */
+                @media (max-width: 768px) {
+                    h1.gradient-text {
+                        font-size: 2.5rem !important;
+                    }
+                    h3 {
+                        font-size: 1.5rem !important;
+                    }
+                    p, ul li {
+                        font-size: 1rem !important;
+                        text-align: justify !important;
+                    }
+                    .glass-card {
+                        padding: 30px 20px !important;
+                    }
+                    .camera-container {
+                        height: 250px !important;
+                    }
+                    .gallery-img {
+                        width: 300px !important;
+                        height: 220px !important;
+                    }
+                    @keyframes scrollGallery {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(calc(-315px * 8)); } /* Adjusted based on width + gap */
+                    }
+                }
             </style>
             <div class="camera-container">
                 <div class="gallery-track">

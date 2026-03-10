@@ -137,6 +137,33 @@
                     from { transform: scale(0.8); opacity: 0; }
                     to { transform: scale(1); opacity: 1; }
                 }
+
+                /* Mobile view adjustment to match desktop */
+                @media (max-width: 768px) {
+                    h1.gradient-text {
+                        font-size: 2.5rem !important; /* Prevent text cropping */
+                    }
+                    h2.gradient-text {
+                        font-size: 1.8rem !important;
+                    }
+                    p {
+                        font-size: 1rem !important;
+                        text-align: justify !important; /* Improve paragraph text alignment */
+                    }
+                    .graphic-design-container {
+                        height: 250px !important; /* Adjust hero image height for mobile */
+                    }
+                    .glass-card {
+                        padding: 30px 20px !important; /* Reduce massive padding on mobile */
+                    }
+                    
+                    /* Force side-by-side gallery on mobile */
+                    .graphic-gallery {
+                        display: grid !important;
+                        grid-template-columns: repeat(2, 1fr) !important; /* Exactly 2 columns */
+                        gap: 10px !important;
+                    }
+                }
             </style>
 
             <div class="graphic-gallery">
