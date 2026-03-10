@@ -1289,32 +1289,50 @@ ul {
         transform: translateY(0);
     }
 
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 150px;
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
+    .hero-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-main-img {
+        height: auto !important;
+        max-height: 400px !important;
+        width: 100%;
+        object-fit: contain;
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem !important;
+        margin-bottom: 15px;
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem !important;
+        margin-bottom: 15px;
     }
 
-    .font-designer {
-        font-size: 1.8rem;
+    .tagline {
+        font-size: 1rem !important;
+        margin-bottom: 15px;
     }
 
-    .image-gallery-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 300px;
+    .scrolling-text-content {
+        font-size: clamp(2rem, 12vw, 3.5rem) !important;
     }
 
-    .gallery-item.large,
-    .gallery-item.wide,
-    .gallery-item.tall {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .glassmorphism {
-        padding: 30px 20px;
+    .section-container {
+        padding: 60px 20px !important;
     }
 
     .contact-grid {
@@ -1323,15 +1341,11 @@ ul {
     }
     
     .contact-massive-heading {
-        font-size: 4rem !important;
+        font-size: 3.5rem !important;
         line-height: 1 !important;
     }
 
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
-    .scrolling-text-content {
-        font-size: clamp(2rem, 15vw, 4rem) !important;
+    .signature-section h2 {
+        font-size: 1.8rem !important;
     }
 }
