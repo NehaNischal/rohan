@@ -60,16 +60,7 @@
             </div>
 
             <div style="font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary);">
-                <p style="margin-bottom: 20px;">My graphic design skill set revolves around creating structured brand
-                    symbolism, visual appeal, and communicative graphics. I excel in transforming conceptual ideas into
-                    visually striking digital assets that prioritize aesthetics and impact.</p>
-                <h3 style="color: var(--primary-orange); margin: 30px 0 10px;">Core Competencies</h3>
-                <ul>
-                    <li style="margin-bottom: 10px;">Logo Design and Brand Identity (e.g., Official School Logo)</li>
-                    <li style="margin-bottom: 10px;">Digital Posters and Banners</li>
-                    <li style="margin-bottom: 10px;">Typography and Color Theory implementation</li>
-                    <li style="margin-bottom: 10px;">UI/UX prototyping basics</li>
-                </ul>
+                <p style="margin-bottom: 20px;">In graphic design, I work with tools such as Affinity Designer, Adobe Photoshop, and Adobe Illustrator to create visually appealing and meaningful designs. I focus on clarity, balance, and aesthetics by applying design principles like the Golden Ratio, ensuring that the final design is both attractive and easy for viewers to understand. My aim is to communicate ideas effectively through thoughtful composition, typography, and visual hierarchy.</p>
             </div>
 
         </div>
@@ -107,51 +98,88 @@
                 .gallery-item:hover img {
                     transform: scale(1.1);
                 }
-                .item-overlay {
+
+                /* Modal Styles */
+                .gallery-modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 99999;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.95);
+                    backdrop-filter: blur(10px);
+                    justify-content: center;
+                    align-items: center;
+                }
+                .modal-content {
+                    max-width: 90%;
+                    max-height: 90%;
+                    border-radius: 10px;
+                    box-shadow: 0 0 50px rgba(255, 107, 0, 0.3);
+                    animation: zoomIn 0.3s ease;
+                }
+                .close-modal {
                     position: absolute;
-                    inset: 0;
-                    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-                    display: flex;
-                    align-items: flex-end;
-                    padding: 20px;
-                    opacity: 0;
-                    transition: opacity 0.4s ease;
+                    top: 30px;
+                    right: 40px;
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: color 0.3s;
                 }
-                .gallery-item:hover .item-overlay {
-                    opacity: 1;
+                .close-modal:hover {
+                    color: var(--primary-orange);
                 }
-                .item-title {
-                    color: white;
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    transform: translateY(20px);
-                    transition: transform 0.4s ease;
-                }
-                .gallery-item:hover .item-title {
-                    transform: translateY(0);
+                @keyframes zoomIn {
+                    from { transform: scale(0.8); opacity: 0; }
+                    to { transform: scale(1); opacity: 1; }
                 }
             </style>
 
             <div class="graphic-gallery">
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openModal(this.querySelector('img').src)">
                     <img src="portfolio/graphic/ACT_16_31.jpg" alt="Graphic Design 1">
-                    <div class="item-overlay"><span class="item-title">Visual Identity</span></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openModal(this.querySelector('img').src)">
                     <img src="portfolio/graphic/BC_JAN_30_STAT.jpg" alt="Graphic Design 2">
-                    <div class="item-overlay"><span class="item-title">Project Presentation</span></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openModal(this.querySelector('img').src)">
                     <img src="portfolio/graphic/BC_JAN_30_TN.jpg" alt="Graphic Design 3">
-                    <div class="item-overlay"><span class="item-title">Conceptual Design</span></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openModal(this.querySelector('img').src)">
                     <img src="portfolio/graphic/SS_AUG_09_STATUS.jpg" alt="Graphic Design 4">
-                    <div class="item-overlay"><span class="item-title">Graphic Communication</span></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(this.querySelector('img').src)">
+                    <img src="portfolio/graphic/SS_AUG_09_TN.jpg" alt="Graphic Design 5">
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Modal for Gallery Lightbox -->
+    <div id="imageModal" class="gallery-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img id="modalImg" class="modal-content">
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "flex";
+            modalImg.src = src;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    </script>
 
 </body>
 

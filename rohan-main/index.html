@@ -98,144 +98,15 @@
         <!-- WHAT I DO SECTION -->
         <section id="what-i-do" class="whatido-section">
             <div class="section-container">
-                <h2 class="section-title align-center"
-                    style="font-size: 3.5rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase;">WHAT I
-                    DO?</h2>
-                <style>
-                    /* Fullscreen Video Transition */
-                    .video-wrapper.fullscreen-triggered {
-                        position: fixed !important;
-                        top: 0 !important;
-                        left: 0 !important;
-                        right: 0 !important;
-                        bottom: 0 !important;
-                        width: 100vw !important;
-                        height: 100vh !important;
-                        max-width: 100vw !important;
-                        max-height: 100vh !important;
-                        margin: 0 !important;
-                        padding: 0 !important;
-                        z-index: 999999 !important;
-                        /* Ensure it's above absolute absolutely everything */
-                        border-radius: 0 !important;
-                        background: #000 !important;
-                        transition: all 1s cubic-bezier(0.85, 0, 0.15, 1);
-                        display: flex !important;
-                        justify-content: center !important;
-                        align-items: center !important;
-                    }
-
-                    .video-wrapper.fullscreen-triggered video {
-                        border-radius: 0 !important;
-                        object-fit: cover !important;
-                        width: 100% !important;
-                        height: 100% !important;
-                    }
-
-                    .close-video {
-                        position: fixed;
-                        top: 30px;
-                        right: 30px;
-                        z-index: 10001;
-                        background: rgba(255, 255, 255, 0.1);
-                        border: 1px solid rgba(255, 255, 255, 0.3);
-                        color: white;
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        display: none;
-                        align-items: center;
-                        justify-content: center;
-                        cursor: pointer;
-                        font-size: 1.5rem;
-                        backdrop-filter: blur(10px);
-                    }
-
-                    .fullscreen-triggered .close-video {
-                        display: flex;
-                        animation: fadeIn 0.5s forwards 1s;
-                    }
-
-                    /* Shatter effect overlay */
-                    .crack-overlay {
-                        position: absolute;
-                        inset: 0;
-                        z-index: 5;
-                        pointer-events: none;
-                        opacity: 0;
-                        background: url('https://www.transparenttextures.com/patterns/broken-glass.png');
-                        filter: invert(1);
-                    }
-
-                    .cracking .crack-overlay {
-                        animation: flashShatter 0.5s ease-out forwards;
-                    }
-
-                    @keyframes flashShatter {
-                        0% {
-                            opacity: 0;
-                            transform: scale(0.8);
-                        }
-
-                        50% {
-                            opacity: 1;
-                            transform: scale(1.1);
-                        }
-
-                        100% {
-                            opacity: 0;
-                            transform: scale(1.2);
-                        }
-                    }
-                </style>
-
-                <div class="video-layout-placeholder"
-                    style="width: 100%; max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; position: relative;">
-                    <div class="video-wrapper glass-card" id="main-video-wrapper"
-                        style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; border-radius: 24px; padding: 0; overflow: hidden; transition: all 1s ease;">
-
-                        <div class="play-button-overlay" id="play-btn"
-                            style="position: absolute; width: 80px; height: 80px; background: rgba(255,107,0,0.8); border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; z-index: 10; transition: transform 0.3s ease; box-shadow: 0 0 20px rgba(255,107,0,0.5);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
-                                viewBox="0 0 16 16" style="margin-left: 5px;">
-                                <path
-                                    d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
-                            </svg>
-                        </div>
-
-                        <video id="feature-video" playsinline controls
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
-                            <source src="vdeo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-
-                <script>
-                    const video = document.getElementById('feature-video');
-                    const playBtn = document.getElementById('play-btn');
-
-                    // Play video and hide button on click
-                    playBtn.addEventListener('click', () => {
-                        video.play();
-                        playBtn.style.display = 'none';
-                    });
-
-                    // Show button if video is paused
-                    video.addEventListener('pause', () => {
-                        playBtn.style.display = 'flex';
-                    });
-
-                    // Hide button when video plays
-                    video.addEventListener('play', () => {
-                        playBtn.style.display = 'none';
-                    });
-                </script>
+                <h2 class="section-title align-center animated-letters"
+                    style="font-size: 5rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase;">
+                    <span>W</span><span>H</span><span>A</span><span>T</span><span>&nbsp;</span><span>I</span><span>&nbsp;</span><span>D</span><span>O</span><span>?</span>
+                </h2>
             </div>
         </section>
 
         <!-- SKILL SET SECTION -->
-        <section id="skill-set" class="skill-set-section section-container" style="padding-top: 60px;">
+        <section id="skill-set" class="skill-set-section section-container" style="padding-top: 20px; margin-top: -20px;">
             <h2 class="section-title align-center">Skill <span class="gradient-text">Set</span></h2>
             <div class="skills-grid">
 
@@ -258,16 +129,9 @@
                 </div>
 
                 <div class="skill-card glass-card interactive-skill"
-                    onclick="window.location.href='skill-presentation.html'">
-                    <div class="skill-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" width="1em" height="1em" style="display:inline-block; vertical-align:middle;">
-                            <path fill="#f35325" d="M0 0h11v11H0z"/>
-                            <path fill="#81bc06" d="M12 0h11v11H12z"/>
-                            <path fill="#05a6f0" d="M0 12h11v11H0z"/>
-                            <path fill="#ffba08" d="M12 12h11v11H12z"/>
-                        </svg>
-                    </div>
-                    <h3>Presentation Design</h3>
+                    onclick="window.location.href='skill-movie-direction.html'">
+                    <div class="skill-icon">🎬</div>
+                    <h3>Movie Direction</h3>
                 </div>
                 <div class="skill-card glass-card interactive-skill"
                     onclick="window.location.href='skill-wildlife.html'">
@@ -287,11 +151,7 @@
                     <h3>Technical Model</h3>
                 </div>
 
-                <div class="skill-card glass-card interactive-skill"
-                    onclick="window.location.href='skill-problem-solving.html'">
-                    <div class="skill-icon">√π</div>
-                    <h3>Problem Solving</h3>
-                </div>
+
 
             </div>
         </section>
@@ -392,8 +252,7 @@
                     <div class="contact-graphics-side reveal-text"
                         style="display: flex; justify-content: center; align-items: center; height: 100%;">
                         <div id="contact-image-container" style="position: relative; width: 100%; max-width: 450px; height: 600px; background: #050505; border-radius: 30px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05);">
-                            <canvas id="contact-particle-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none;"></canvas>
-                            <img id="contact-main-img" src="contact.jpeg" alt="Contact Rohan" style="width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease;">
+                            <img id="contact-main-img" src="contact.jpeg" alt="Contact Rohan" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>

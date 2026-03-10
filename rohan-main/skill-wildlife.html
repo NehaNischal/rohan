@@ -69,6 +69,7 @@
                     flex-shrink: 0;
                     transition: transform 0.4s ease, filter 0.4s ease;
                     filter: grayscale(40%);
+                    cursor: pointer;
                 }
 
                 .gallery-img:hover {
@@ -81,27 +82,66 @@
                     0% { transform: translateX(0); }
                     100% { transform: translateX(calc(-565px * 8)); }
                 }
+
+                /* Modal Styles */
+                .gallery-modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 99999;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.95);
+                    backdrop-filter: blur(10px);
+                    justify-content: center;
+                    align-items: center;
+                }
+                .modal-content {
+                    max-width: 90%;
+                    max-height: 90%;
+                    border-radius: 10px;
+                    box-shadow: 0 0 50px rgba(255, 107, 0, 0.3);
+                    animation: zoomIn 0.3s ease;
+                }
+                .close-modal {
+                    position: absolute;
+                    top: 30px;
+                    right: 40px;
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: color 0.3s;
+                }
+                .close-modal:hover {
+                    color: var(--primary-orange);
+                }
+                @keyframes zoomIn {
+                    from { transform: scale(0.8); opacity: 0; }
+                    to { transform: scale(1); opacity: 1; }
+                }
             </style>
             <div class="camera-container">
                 <div class="gallery-track">
                     <!-- Original 8 Images -->
-                    <img src="wildlife new (1).jpeg" class="gallery-img">
-                    <img src="wildlife new (2).jpeg" class="gallery-img">
-                    <img src="wildlife new (3).jpeg" class="gallery-img">
-                    <img src="wildlife new (4).jpeg" class="gallery-img">
-                    <img src="wildlife new (5).jpeg" class="gallery-img">
-                    <img src="wildlife new (6).jpeg" class="gallery-img">
-                    <img src="wildlife new (7).jpeg" class="gallery-img">
-                    <img src="wildlife new (8).jpeg" class="gallery-img">
+                    <img src="wildlife new (1).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (2).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (3).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (4).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (5).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (6).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (7).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (8).jpeg" class="gallery-img" onclick="openModal(this.src)">
                     <!-- Duplicated 8 Images for Seamless Infinite Scroll -->
-                    <img src="wildlife new (1).jpeg" class="gallery-img">
-                    <img src="wildlife new (2).jpeg" class="gallery-img">
-                    <img src="wildlife new (3).jpeg" class="gallery-img">
-                    <img src="wildlife new (4).jpeg" class="gallery-img">
-                    <img src="wildlife new (5).jpeg" class="gallery-img">
-                    <img src="wildlife new (6).jpeg" class="gallery-img">
-                    <img src="wildlife new (7).jpeg" class="gallery-img">
-                    <img src="wildlife new (8).jpeg" class="gallery-img">
+                    <img src="wildlife new (1).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (2).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (3).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (4).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (5).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (6).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (7).jpeg" class="gallery-img" onclick="openModal(this.src)">
+                    <img src="wildlife new (8).jpeg" class="gallery-img" onclick="openModal(this.src)">
                 </div>
             </div>
 
@@ -113,6 +153,28 @@
 
         </div>
     </main>
+
+    <!-- Modal for Gallery Lightbox -->
+    <div id="imageModal" class="gallery-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img id="modalImg" class="modal-content">
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "flex";
+            modalImg.src = src;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    </script>
 
 </body>
 

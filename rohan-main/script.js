@@ -81,6 +81,20 @@ document.querySelectorAll('.section-container, .hero-content, .hero-graphics, .p
     observer.observe(el);
 });
 
+// Specific observer for What I Do section letters
+const whatIdoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            whatIdoObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+const whatIdoSection = document.getElementById('what-i-do');
+if (whatIdoSection) whatIdoObserver.observe(whatIdoSection);
+
+
 // Setup styles and observe elements that come from the left
 document.querySelectorAll('.slide-in-left').forEach(el => {
     el.style.opacity = '0';
@@ -140,144 +154,7 @@ document.querySelectorAll('.animated-letters').forEach(el => {
     }
 });
 
-// Contact Image Particle Assembly Animation
-const initContactAnimation = () => {
-    const canvas = document.getElementById('contact-particle-canvas');
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
-    const container = document.getElementById('contact-image-container');
-    const img = document.getElementById('contact-main-img');
-    
-    let width, height;
-    let particles = [];
-    let animationFrame;
-    let assembled = false;
 
-    const resize = () => {
-        const rect = container.getBoundingClientRect();
-        width = canvas.width = rect.width;
-        height = canvas.height = rect.height;
-    };
-
-    window.addEventListener('resize', resize);
-    resize();
-
-    class Particle {
-        constructor(targetX, targetY) {
-            this.targetX = targetX;
-            this.targetY = targetY;
-            // Start from much further away for a grander entrance
-            const angle = Math.random() * Math.PI * 2;
-            const dist = Math.max(width, height) * (1.5 + Math.random() * 2);
-            this.x = targetX + Math.cos(angle) * dist;
-            this.y = targetY + Math.sin(angle) * dist;
-            
-            this.size = 1 + Math.random() * 1.5;
-            this.speed = 0.01 + Math.random() * 0.02; // Slower start
-            this.accel = 1.03; // Faster acceleration
-            this.alpha = 0.8;
-        }
-
-        update() {
-            const dx = this.targetX - this.x;
-            const dy = this.targetY - this.y;
-            this.x += dx * this.speed;
-            this.y += dy * this.speed;
-            this.speed *= this.accel;
-            
-            const dist = Math.sqrt(dx*dx + dy*dy);
-            if (dist < 0.5) {
-                this.x = this.targetX;
-                this.y = this.targetY;
-                return true;
-            }
-            return false;
-        }
-
-        draw() {
-            ctx.fillStyle = `rgba(255, 107, 0, ${this.alpha})`;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    }
-
-    const createParticles = () => {
-        particles = [];
-        // Draw image to hidden canvas or temporary context to get pixel data
-        const tempCanvas = document.createElement('canvas');
-        const tempCtx = tempCanvas.getContext('2d');
-        tempCanvas.width = width;
-        tempCanvas.height = height;
-        
-        // We need the image to be loaded to sample it
-        tempCtx.drawImage(img, 0, 0, width, height);
-        
-        // Sample points - more points for better definition
-        const step = 8; // Adjust step for density (lower is denser)
-        for (let y = 0; y < height; y += step) {
-            for (let x = 0; x < width; x += step) {
-                particles.push(new Particle(x, y));
-            }
-        }
-        
-        // Add some random extra dots for volume
-        for (let i = 0; i < 500; i++) {
-            particles.push(new Particle(Math.random() * width, Math.random() * height));
-        }
-    };
-
-    const animate = () => {
-        ctx.clearRect(0, 0, width, height);
-        let allArrived = true;
-
-        particles.forEach(p => {
-            const arrived = p.update();
-            p.draw();
-            if (!arrived) allArrived = false;
-        });
-
-        if (allArrived) {
-            assembled = true;
-            img.style.opacity = '1';
-            // Fade out particles slowly
-            let fadeOut = setInterval(() => {
-                ctx.clearRect(0, 0, width, height);
-                let anyVisible = false;
-                particles.forEach(p => {
-                    p.alpha -= 0.03;
-                    if (p.alpha > 0) {
-                        p.draw();
-                        anyVisible = true;
-                    }
-                });
-                if (!anyVisible) {
-                    clearInterval(fadeOut);
-                    cancelAnimationFrame(animationFrame);
-                }
-            }, 30);
-            return;
-        }
-
-        animationFrame = requestAnimationFrame(animate);
-    };
-
-    const contactObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && !assembled) {
-            // Ensure image is loaded before sampling
-            if (img.complete) {
-                createParticles();
-                animate();
-            } else {
-                img.onload = () => {
-                    createParticles();
-                    animate();
-                };
-            }
-            contactObserver.unobserve(container);
-        }
-    }, { threshold: 0.1 }); // Trigger earlier so user sees dots flying in
 
 // Skill Cards 3D Tilt Effect
 const initTiltEffect = () => {
@@ -308,12 +185,10 @@ const initTiltEffect = () => {
 };
 
 // ... existing code ...
-    contactObserver.observe(container);
-};
+
 
 // Robust Hash Scrolling on Load
 window.addEventListener('load', () => {
-    initContactAnimation();
     initTiltEffect();
     if (window.location.hash) {
         // First jump immediately 
