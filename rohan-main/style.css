@@ -584,7 +584,7 @@ ul {
 
 .scrolling-text-content {
     font-family: 'Edo', sans-serif;
-    font-size: clamp(4rem, 15vw, 20rem);
+    font-size: clamp(2.5rem, 12vw, 15rem);
     /* Adjusted for "The Designer" phrase */
     font-weight: 400;
     color: var(--primary-orange);
@@ -1315,5 +1315,23 @@ ul {
 
     .glassmorphism {
         padding: 30px 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .contact-massive-heading {
+        font-size: 4rem !important;
+        line-height: 1 !important;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .scrolling-text-content {
+        font-size: clamp(2rem, 15vw, 4rem) !important;
     }
 }
